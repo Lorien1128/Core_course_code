@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj CPU -o D:/ISE/CPU/EXT.tfi -lib work D:/ISE/CPU//EXT.v -module EXT -template D:/ISE/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

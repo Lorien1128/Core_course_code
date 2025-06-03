@@ -1,0 +1,12 @@
+
+
+
+// Instantiate the module
+EXT instance_name (
+    .EXTin(EXTin), 
+    .EXTOp(EXTOp), 
+    .LUIsel(LUIsel), 
+    .EXTout(EXTout)
+    );
+
+

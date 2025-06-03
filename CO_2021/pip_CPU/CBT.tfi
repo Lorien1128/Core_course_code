@@ -1,0 +1,18 @@
+
+
+
+// Instantiate the module
+CBT instance_name (
+    .D_ins_o(D_ins_o), 
+    .E_ins_o(E_ins_o), 
+    .M_ins_o(M_ins_o), 
+    .W_ins_o(W_ins_o), 
+    .M1sel(M1sel), 
+    .M2sel(M2sel), 
+    .M3sel(M3sel), 
+    .M4sel(M4sel), 
+    .M5sel(M5sel), 
+    .stall(stall)
+    );
+
+

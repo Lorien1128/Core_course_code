@@ -1,0 +1,10 @@
+
+
+
+// Instantiate the module
+TypeGet instance_name (
+    .ins(ins), 
+    .type(type)
+    );
+
+

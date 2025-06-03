@@ -1,0 +1,48 @@
+Running: D:\ISE\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o D:/ISE/pip_CPU/mips_tb_isim_beh.exe -prj D:/ISE/pip_CPU/mips_tb_beh.prj work.mips_tb work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Analyzing Verilog file "D:/ISE/pip_CPU/TypeGet.v" into library work
+Analyzing Verilog file "D:/ISE/pip_CPU/IM.v" into library work
+Analyzing Verilog file "D:/ISE/pip_CPU/RF.v" into library work
+Analyzing Verilog file "D:/ISE/pip_CPU/pipReg.v" into library work
+Analyzing Verilog file "D:/ISE/pip_CPU/IFU.v" into library work
+Analyzing Verilog file "D:/ISE/pip_CPU/EXT.v" into library work
+Analyzing Verilog file "D:/ISE/pip_CPU/DM.v" into library work
+Analyzing Verilog file "D:/ISE/pip_CPU/Control.v" into library work
+Analyzing Verilog file "D:/ISE/pip_CPU/CBT.v" into library work
+Analyzing Verilog file "D:/ISE/pip_CPU/ALU.v" into library work
+Analyzing Verilog file "D:/ISE/pip_CPU/mips.v" into library work
+Analyzing Verilog file "D:/ISE/pip_CPU/mips_tb.v" into library work
+Analyzing Verilog file "D:/ISE/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:1016 - "D:/ISE/pip_CPU/mips.v" Line 130: Port d1_i is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/ISE/pip_CPU/mips.v" Line 223: Port EXTOp_i is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/ISE/pip_CPU/mips.v" Line 285: Port zero is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/ISE/pip_CPU/mips.v" Line 299: Port d3_i is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/ISE/pip_CPU/mips.v" Line 364: Port d3_i is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/ISE/pip_CPU/CBT.v" Line 44: Port wd is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/ISE/pip_CPU/CBT.v" Line 62: Port urs is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/ISE/pip_CPU/CBT.v" Line 70: Port urs is not connected to this instance
+Completed static elaboration
+Compiling module IM
+Compiling module IFU
+Compiling module Control
+Compiling module pipReg
+Compiling module RF
+Compiling module EXT
+Compiling module ALU
+Compiling module DM
+Compiling module TypeGet
+Compiling module CBT
+Compiling module mips
+Compiling module mips_tb
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+WARNING:Simulator - Unable to copy libPortabilityNOSH.dll to the simulation executable directory: boost::filesystem::copy_file: 系统找不到指定的路径。, "isim\mips_tb_isim_beh.exe.sim\libPortability.dll".
+Compiled 13 Verilog Units
+Built simulation executable D:/ISE/pip_CPU/mips_tb_isim_beh.exe
+Fuse Memory Usage: 31488 KB
+Fuse CPU Usage: 452 ms

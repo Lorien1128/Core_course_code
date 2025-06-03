@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj CPU -o D:/ISE/CPU/DM.tfi -lib work D:/ISE/CPU//DM.v -module DM -template D:/ISE/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

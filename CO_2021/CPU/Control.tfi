@@ -1,0 +1,21 @@
+
+
+
+// Instantiate the module
+Control instance_name (
+    .funct(funct), 
+    .op(op), 
+    .WRsel(WRsel), 
+    .WDsel(WDsel), 
+    .RFWr(RFWr), 
+    .EXTOp(EXTOp), 
+    .Bsel(Bsel), 
+    .ALUOp(ALUOp), 
+    .DMWr(DMWr), 
+    .Br(Br), 
+    .LUIsel(LUIsel), 
+    .Jal(Jal), 
+    .Jr(Jr)
+    );
+
+

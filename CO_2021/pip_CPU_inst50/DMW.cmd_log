@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj pip_CPU_inst50 -o D:/ISE/pip_CPU_inst50/DMW.tfi -lib work D:/ISE/pip_CPU_inst50//DMW.v -module DMW -template D:/ISE/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

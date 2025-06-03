@@ -1,0 +1,1 @@
+java -jar D:\down\Mars4_5.jar a db mc CompactDataAtZero dump 0x00003000-0x00003010 HexText D:\MIPS\code_handler.txt D:\MIPS\mips1.asm

@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj CPU_P7 -o D:/ISE/CPU_P7/CP0.tfi -lib work D:/ISE/CPU_P7//CP0.v -module CP0 -template D:/ISE/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

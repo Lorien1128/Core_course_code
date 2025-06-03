@@ -1,0 +1,3 @@
+vhdtdtfi -lang verilog -prj CPU -o D:/ISE/CPU/DataPath.tfi -lib work D:/ISE/CPU//DataPath.v -module DataPath -template D:/ISE/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+vhdtdtfi -lib work D:/ISE/CPU/DataPath.v -lang verilog -prj CPU -o DataPath.spl -module DataPath -template D:/ISE/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 DataPath.spl D:/ISE/CPU/DataPath.sym 

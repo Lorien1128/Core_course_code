@@ -1,0 +1,31 @@
+
+
+
+// Instantiate the module
+DataPath instance_name (
+    .clk(clk), 
+    .reset(reset), 
+    .pc(pc), 
+    .pc4(pc4), 
+    .shamt(shamt), 
+    .rd(rd), 
+    .rt(rt), 
+    .rs(rs), 
+    .imm(imm), 
+    .addr(addr), 
+    .WRsel(WRsel), 
+    .WDsel(WDsel), 
+    .RFWr(RFWr), 
+    .EXTOp(EXTOp), 
+    .Bsel(Bsel), 
+    .ALUOp(ALUOp), 
+    .DMWr(DMWr), 
+    .Br(Br), 
+    .LUIsel(LUIsel), 
+    .Jal(Jal), 
+    .Jr(Jr), 
+    .zero(zero), 
+    .ra(ra)
+    );
+
+

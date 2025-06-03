@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>付款</title>
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="layui-v2.7.6/layui-v2.7.6/layui/layui.js"></script>
+    <script src="Js/pay.js"></script>
+    <script src="Js/tool.js"></script>
+    <link rel="stylesheet" type="text/css" href="layui-v2.7.6/layui-v2.7.6/layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="bulma/css/bulma-rtl.css">
+    <style>body{
+        font-family: "仓耳渔阳体 W04",serif;
+    }</style>
+</head>
+<body onload="initPage()" style="padding-bottom: 200px">
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header has-background-success">
+        <div class="layui-logo layui-hide-xs layui-bg-green" style="font-size: x-large" id="title">确认订单</div>
+        <ul class="layui-nav layui-layout-left layui-row">
+        </ul>
+    </div>
+</div>
+<div style="margin-top: 130px; margin-right: 300px; margin-left: 300px">
+    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 130px; margin-bottom: 50px">
+        <legend>订单详情</legend>
+    </fieldset>
+    <div class="layui-row">
+        <div class="layui-panel" style="border-radius: 20px; border: #3ec487 solid 1px; padding: 10px">
+            <div class="layui-row" style="margin-top: 10px">
+                <div class="layui-col-md7 layui-col-md-offset1">
+                    <span style="font-size: large">用户名</span>
+                </div>
+                <div class="layui-col-md4">
+                    <span id="diner-name" style="color: darkgray; position: relative; top: 1px;"></span>
+                </div>
+            </div>
+            <hr style="margin: 5px"/>
+            <div class="layui-row" style="margin-top: 10px">
+                <div class="layui-col-md7 layui-col-md-offset1">
+                    <span style="font-size: large">用户电话</span>
+                </div>
+                <div class="layui-col-md4">
+                    <span id="diner-phone" style="color: darkgray; position: relative; top: 1px;"></span>
+                </div>
+            </div>
+            <hr style="margin: 5px"/>
+            <div class="layui-row" style="margin-top: 10px">
+                <div class="layui-col-md7 layui-col-md-offset1">
+                    <span style="font-size: large">用户坐标</span>
+                </div>
+                <div class="layui-col-md4">
+                    <span id="diner-pos" style="color: darkgray; position: relative; top: 1px;"></span>
+                </div>
+            </div>
+            <hr style="margin: 5px"/>
+            <div class="layui-row" style="margin-top: 10px">
+                <div class="layui-col-md7 layui-col-md-offset1">
+                    <span style="font-size: large">餐馆名</span>
+                </div>
+                <div class="layui-col-md4">
+                    <span id="restaurant-name" style="color: darkgray; position: relative; top: 1px;"></span>
+                </div>
+            </div>
+            <hr style="margin: 5px"/>
+            <div class="layui-row" style="margin-top: 10px">
+                <div class="layui-col-md7 layui-col-md-offset1">
+                    <span style="font-size: large">餐馆电话</span>
+                </div>
+                <div class="layui-col-md4">
+                    <span id="restaurant-phone" style="color: darkgray; position: relative; top: 1px;"></span>
+                </div>
+            </div>
+            <hr style="margin: 5px"/>
+            <div class="layui-row" style="margin-top: 10px">
+                <div class="layui-col-md7 layui-col-md-offset1">
+                    <span style="font-size: large">餐馆坐标</span>
+                </div>
+                <div class="layui-col-md4">
+                    <span id="restaurant-pos" style="color: darkgray; position: relative; top: 1px;"></span>
+                </div>
+            </div>
+            <hr style="margin: 5px"/>
+            <div class="layui-row" style="margin-top: 10px">
+                <div class="layui-col-md7 layui-col-md-offset1">
+                    <span style="font-size: large">配送员名（配送员由系统自动分配）</span>
+                </div>
+                <div class="layui-col-md4">
+                    <span id="deliverer-name" style="color: darkgray; position: relative; top: 1px;"></span>
+                </div>
+            </div>
+            <hr style="margin: 5px"/>
+            <div class="layui-row" style="margin-top: 10px">
+                <div class="layui-col-md7 layui-col-md-offset1">
+                    <span style="font-size: large">配送员电话</span>
+                </div>
+                <div class="layui-col-md4">
+                    <span id="deliverer-phone" style="color: darkgray; position: relative; top: 1px;"></span>
+                </div>
+            </div>
+            <div id="query-msg" style="display: none">
+                <hr style="margin: 5px"/>
+                <div class="layui-row" style="margin-top: 10px">
+                    <div class="layui-col-md7 layui-col-md-offset1">
+                        <span style="font-size: large">订单提交时间</span>
+                    </div>
+                    <div class="layui-col-md4">
+                        <span id="submit-time" style="color: darkgray; position: relative; top: 1px;"></span>
+                    </div>
+                </div>
+                <hr style="margin: 5px"/>
+                <div class="layui-row" style="margin-top: 10px">
+                    <div class="layui-col-md7 layui-col-md-offset1">
+                        <span style="font-size: large">配送状态</span>
+                    </div>
+                    <div class="layui-col-md4">
+                        <span id="deliver-state" style="position: relative; top: 1px;"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-row" style="margin-top: 40px">
+        <div class="layui-panel" style="border-radius: 20px; border: #3ec487 solid 1px; padding: 10px">
+            <div id="dish-list"></div>
+            <div class="layui-row" style="margin-top: 10px">
+                <div class="layui-col-md5 layui-col-md-offset1">
+                    <span style="font-size: large">配送费（按距离计算）</span>
+                </div>
+                <div class="layui-col-md3">
+                    <span style="color: darkgray; position: relative; top: 1px;">&nbsp;</span>
+                </div>
+                <div class="layui-col-md3">
+                    <span style="font-size: small;" >￥</span>
+                    <span id="deliverFee"></span>
+                </div>
+            </div>
+            <div id="coupon-display">
+                <hr style="margin: 5px"/>
+                <div class="layui-row" style="margin-top: 10px">
+                    <div class="layui-col-md5 layui-col-md-offset1">
+                        <span style="font-size: large">优惠券</span>
+                    </div>
+                    <div class="layui-col-md3">
+                        <span style="color: darkgray; position: relative; top: 1px;">&nbsp;</span>
+                    </div>
+                    <div class="layui-col-md3">
+                        <span id="coupon"></span>
+                    </div>
+                </div>
+            </div>
+            <hr style="margin: 5px"/>
+            <div class="layui-row" style="margin-top: 10px">
+                <div class="layui-col-md5 layui-col-md-offset1">
+                    <span style="font-size: large" id="total-mode">实付金额</span>
+                </div>
+                <div class="layui-col-md3">
+                    <span style="color: darkgray; position: relative; top: 1px;">&nbsp;</span>
+                </div>
+                <div class="layui-col-md3">
+                    <span style="font-size: small; color: red;">￥</span>
+                    <span style='font-size: large; color: red' id="total-price"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-row" style="margin-top: 40px" id="pay-coupon">
+        <div class="layui-panel" style="border-radius: 20px; border: #3ec487 solid 1px; padding: 10px">
+            <div class="layui-form" id="coupon-form">
+                <div class="layui-form-item" style="margin-bottom: 0">
+                    <label class="layui-form-label" style="width: 200px">请选择要使用的优惠券</label>
+                    <div class="layui-input layui-input-inline" style="margin-left: 280px">
+                        <label>
+                            <select class="layui-select" id="coupon-select" name="cid">
+                                <option value="-1" selected="selected">不使用优惠券</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="margin-top: 40px; float: right">
+        <button id="pay-btn" type="button" class="layui-btn layui-btn-lg layui-bg-green" onclick="commitOrder()" style="border-radius: 10px">
+            <span style="font-family: '仓耳渔阳体 W04',serif; font-size: x-large">确认付款</span>
+        </button>
+    </div>
+</div>
+
+</body>
+</html>

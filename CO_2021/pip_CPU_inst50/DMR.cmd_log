@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj pip_CPU_inst50 -o D:/ISE/pip_CPU_inst50/DMR.tfi -lib work D:/ISE/pip_CPU_inst50//DMR.v -module DMR -template D:/ISE/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

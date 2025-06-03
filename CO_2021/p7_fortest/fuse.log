@@ -1,0 +1,100 @@
+Running: D:\ISE\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o D:/ISE/p7_fortest/mips_txt_isim_beh.exe -prj D:/ISE/p7_fortest/mips_txt_beh.prj work.mips_txt work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Analyzing Verilog file "D:/ISE/p7_fortest/decoder.v" into library work
+Analyzing Verilog file "D:/ISE/p7_fortest/STOP_controller.v" into library work
+Analyzing Verilog file "D:/ISE/p7_fortest/reg_pipeline.v" into library work
+Analyzing Verilog file "D:/ISE/p7_fortest/MUX_forward.v" into library work
+Analyzing Verilog file "D:/ISE/p7_fortest/MUX.v" into library work
+Analyzing Verilog file "D:/ISE/p7_fortest/M.v" into library work
+Analyzing Verilog file "D:/ISE/p7_fortest/FORWARD_controller.v" into library work
+Analyzing Verilog file "D:/ISE/p7_fortest/F.v" into library work
+Analyzing Verilog file "D:/ISE/p7_fortest/EXC.v" into library work
+Analyzing Verilog file "D:/ISE/p7_fortest/E.v" into library work
+Analyzing Verilog file "D:/ISE/p7_fortest/D.v" into library work
+Analyzing Verilog file "D:/ISE/p7_fortest/CP0.v" into library work
+Analyzing Verilog file "D:/ISE/p7_fortest/AT_controller.v" into library work
+Analyzing Verilog file "D:/ISE/p7_fortest/datapath.v" into library work
+Analyzing Verilog file "D:/ISE/p7_fortest/control.v" into library work
+Analyzing Verilog file "D:/ISE/p7_fortest/timer.v" into library work
+Analyzing Verilog file "D:/ISE/p7_fortest/CPU.v" into library work
+Analyzing Verilog file "D:/ISE/p7_fortest/BRIDGE.v" into library work
+Analyzing Verilog file "D:/ISE/p7_fortest/mips.v" into library work
+Analyzing Verilog file "D:/ISE/p7_fortest/tb_without_interrupt.v" into library work
+Analyzing Verilog file "D:/ISE/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:1016 - "D:/ISE/p7_fortest/MUX.v" Line 33: Port RegWrite is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/ISE/p7_fortest/reg_pipeline.v" Line 39: Port RegWrite is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/ISE/p7_fortest/D.v" Line 107: Port RegWrite is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/ISE/p7_fortest/D.v" Line 69: Port RegWrite is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/ISE/p7_fortest/D.v" Line 86: Port RegWrite is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/ISE/p7_fortest/EXC.v" Line 45: Port RegWrite is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/ISE/p7_fortest/MUX.v" Line 53: Port RegWrite is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/ISE/p7_fortest/MUX.v" Line 64: Port RegWrite is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/ISE/p7_fortest/E.v" Line 144: Port RegWrite is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/ISE/p7_fortest/E.v" Line 40: Port RegWrite is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/ISE/p7_fortest/M.v" Line 36: Port RegWrite is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/ISE/p7_fortest/MUX.v" Line 78: Port RegWrite is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/ISE/p7_fortest/reg_pipeline.v" Line 172: Port MemWrite is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/ISE/p7_fortest/MUX.v" Line 98: Port RegWrite is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/ISE/p7_fortest/CP0.v" Line 58: Port RegWrite is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/ISE/p7_fortest/CP0.v" Line 59: Port RegWrite is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/ISE/p7_fortest/AT_controller.v" Line 135: Port RegWrite is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/ISE/p7_fortest/STOP_controller.v" Line 43: Port RegWrite is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/ISE/p7_fortest/STOP_controller.v" Line 44: Port RegWrite is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/ISE/p7_fortest/STOP_controller.v" Line 45: Port RegWrite is not connected to this instance
+Completed static elaboration
+Compiling module decoder
+Compiling module MUX_PC
+Compiling module PC
+Compiling module ADD4
+Compiling module IM
+Compiling module EXC_F
+Compiling module regD
+Compiling module NPC
+Compiling module RF
+Compiling module EXT
+Compiling module MFCMP1D
+Compiling module MFCMP2D
+Compiling module CMP
+Compiling module EXC_D
+Compiling module regE
+Compiling module MFALUAE
+Compiling module MFALUBE
+Compiling module MUX_ALUA
+Compiling module MUX_ALUB
+Compiling module ALU
+Compiling module MD
+Compiling module EXC_E
+Compiling module regM
+Compiling module MFWDM
+Compiling module DM
+Compiling module EXC_M
+Compiling module MUX_DM
+Compiling module regW
+Compiling module MUX_WD
+Compiling module CP0
+Compiling module datapath
+Compiling module AT_E
+Compiling module AT_M
+Compiling module AT_W
+Compiling module ATtotal
+Compiling module FORWARD_controller
+Compiling module STOP_control
+Compiling module STOP
+Compiling module control
+Compiling module CPU
+Compiling module BRIDGE
+Compiling module TC
+Compiling module mips
+Compiling module mips_txt
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 29 sub-compilation(s) to finish...
+WARNING:Simulator - Unable to copy libPortabilityNOSH.dll to the simulation executable directory: boost::filesystem::copy_file: 系统找不到指定的路径。, "isim\mips_txt_isim_beh.exe.sim\libPortability.dll".
+Compiled 45 Verilog Units
+Built simulation executable D:/ISE/p7_fortest/mips_txt_isim_beh.exe
+Fuse Memory Usage: 33072 KB
+Fuse CPU Usage: 874 ms

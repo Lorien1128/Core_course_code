@@ -1,0 +1,11 @@
+
+
+
+// Instantiate the module
+DMW instance_name (
+    .DMWOp(DMWOp), 
+    .addr(addr), 
+    .byteen(byteen)
+    );
+
+

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>点餐</title>
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="layui-v2.7.6/layui-v2.7.6/layui/layui.js"></script>
+    <script src="Js/diner.js"></script>
+    <link rel="stylesheet" type="text/css" href="layui-v2.7.6/layui-v2.7.6/layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="bulma/css/bulma-rtl.css">
+    <style>body{
+        font-family: "仓耳渔阳体 W04",serif;
+    }</style>
+</head>
+<body onload="initPage()">
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header has-background-success">
+        <div class="layui-logo layui-hide-xs layui-bg-green" style="font-size: x-large">模拟点餐平台</div>
+            <ul class="layui-nav layui-layout-left layui-row">
+                <li class="layui-nav-item" style="width: 160px; text-align: center"><a href="javascript:void(0)" onclick="searchRestaurant()">
+                    <span style="font-size: x-large; letter-spacing: 2px;">商家</span>
+                </a></li>
+                <li class="layui-nav-item" style="width: 160px; text-align: center"><a href="javascript:void(0)" onclick="searchDish()">
+                    <span style="font-size: x-large; letter-spacing: 2px">菜品</span>
+                </a></li>
+                <li class="layui-nav-item" style="width: 160px; text-align: center">
+
+                </li>
+            </ul>
+
+        <form class="layui-form" id="search">
+            <div class="layui-form-item">
+                <div class="layui-input-block" style="top: 12px; left: 500px; margin-right: 876px">
+                    <label>
+                        <input name="keyword" class="layui-input" placeholder="请输入您想要查找的店名/菜名" style="border-radius: 20px; height: 38px">
+                    </label>
+                </div>
+            </div>
+        </form>
+        <div style="position: absolute; top: 12px; right: 375px;">
+            <button type="button" class="layui-btn layui-btn-radius" onclick="search()"><span style="font-family: '仓耳渔阳体 W04',serif">搜索</span></button>
+        </div>
+        <ul class="layui-nav layui-layout-right">
+            <li class="layui-nav-item layui-hide-xs" style="margin-right: 100px; width: 160px; text-align: center"><a href="javascript:void(0)">
+                <span style="font-size: x-large; letter-spacing: 2px">个人空间</span></a>
+            </li>
+            <li class="layui-nav-item layui-hide layui-show-md-inline-block" style="text-align: center">
+                <img src="img/login/2715829d568f7f4a732316f67f5279c6.jpeg" class="layui-nav-img" alt="用户头像" style="size: 30px">
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="layui-body" style="margin-top: 120px; margin-right: 200px">
+    <div class="layui-row" style="margin-right: 200px">
+        <div class="layui-col-md4 layui-col-md-offset9">
+            <button class="layui-btn" onclick="changeSearchBtn()" id="whole-search-btn">
+                <i class="layui-icon layui-icon-list"></i>
+                <span id="search-mode-btn" style="font-family: '仓耳渔阳体 W04', serif; font-size: medium">按距离</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="layui-row layui-col-space30" style="margin-right: 200px; margin-top: 20px">
+        <div class="layui-col-md4 layui-col-md-offset2">
+            <a href="">
+                <div class="layui-panel" style="padding: 12px 12px 0; border: 1px #3ec487 solid; border-radius: 10px">
+                    <div class="layui-row">
+                        <div class="layui-col-md3">
+                            <img src="img/login/2715829d568f7f4a732316f67f5279c6.jpeg" style="height: 64px; width: 60px; border-radius: 10px" alt="">
+                        </div>
+                        <div class="layui-col-md9">
+                            <div class="layui-row">
+                                <div class="layui-col-md8">
+                                    <p style="font-size: large;">阿巴阿巴火锅啊</p>
+                                </div>
+                                <div class="layui-col-md4">
+                                    <span class="layui-badge layui-bg-green">
+                                        <span>火锅</span>
+                                        <i class="layui-icon layui-icon-note"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="layui-row">
+                                <div class="layui-col-md8" id="rate1"></div>
+                                <script>
+                                    layui.use(['rate'], function(){
+                                        const rate = layui.rate;
+                                        rate.render({
+                                            elem: '#rate1'
+                                            ,value: 4
+                                            ,readonly: true
+                                        });
+                                    });
+                                </script>
+                                <div class="layui-col-md4">
+                                    <p style="font-size: smaller; padding-top: 15px; color: gray; font-family: '仓耳渔阳体 W03',serif">距您12 km</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="layui-col-md4">
+            <a href="">
+                <div class="layui-panel" style="padding: 12px 12px 0; border: 1px #3ec487 solid; border-radius: 10px">
+                    <div class="layui-row">
+                        <div class="layui-col-md3">
+                            <img src="img/login/2715829d568f7f4a732316f67f5279c6.jpeg" style="height: 60px; width: 60px; border-radius: 10px" alt="">
+                        </div>
+                        <div class="layui-col-md9">
+                            <div class="layui-row">
+                                <p style="font-size: large">阿巴阿巴火锅</p>
+                            </div>
+                            <div class="layui-row">
+                                <div class="layui-col-md8" id="rate2" style="margin: 0; padding: 0"></div>
+                                <div class="layui-col-md4">
+                                    <p style="font-size: smaller; padding-top: 15px; color: gray">距你12km</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

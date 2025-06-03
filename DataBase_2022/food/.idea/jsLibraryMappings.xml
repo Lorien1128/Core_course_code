@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptLibraryMappings">
+    <file url="file://$PROJECT_DIR$/src/main/webapp/Js/diner.js" libraries="{jquery}" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/Js/dish.js" libraries="{jquery}" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/Js/login.js" libraries="{jquery}" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/Js/order.js" libraries="{jquery}" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/Js/pay.js" libraries="{jquery}" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/Js/restaurant.js" libraries="{jquery}" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/Js/space.js" libraries="{jquery}" />
+  </component>
+</project>

@@ -1,0 +1,2 @@
+vhdtdtfi -lang verilog -prj pip_CPU -o D:/ISE/pip_CPU/pipReg.tfi -lib work D:/ISE/pip_CPU//pipReg.v -module pipReg -template D:/ISE/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+vhdtdtfi -lang verilog -prj pip_CPU -o D:/ISE/pip_CPU/pipReg.tfi -lib work D:/ISE/pip_CPU//pipReg.v -module pipReg -template D:/ISE/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

@@ -1,0 +1,25 @@
+
+
+
+// Instantiate the module
+IFU instance_name (
+    .clk(clk), 
+    .reset(reset), 
+    .Br(Br), 
+    .zero(zero), 
+    .Jal(Jal), 
+    .Jr(Jr), 
+    .ra(ra), 
+    .funct(funct), 
+    .shamt(shamt), 
+    .rd(rd), 
+    .rt(rt), 
+    .rs(rs), 
+    .op(op), 
+    .imm(imm), 
+    .addr(addr), 
+    .pcout(pcout), 
+    .pc4(pc4)
+    );
+
+

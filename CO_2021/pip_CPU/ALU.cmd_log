@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj pip_CPU -o D:/ISE/pip_CPU/ALU.tfi -lib work D:/ISE/pip_CPU//ALU.v -module ALU -template D:/ISE/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

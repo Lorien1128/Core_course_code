@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj pip_CPU -o D:/ISE/pip_CPU/CBT.tfi -lib work D:/ISE/pip_CPU//CBT.v -module CBT -template D:/ISE/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

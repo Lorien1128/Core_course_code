@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj pip_CPU -o D:/ISE/pip_CPU/RF.tfi -lib work D:/ISE/pip_CPU//RF.v -module RF -template D:/ISE/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

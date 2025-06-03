@@ -1,0 +1,17 @@
+
+
+
+// Instantiate the module
+MD instance_name (
+    .MDA(MDA), 
+    .MDB(MDB), 
+    .MDOp(MDOp), 
+    .clk(clk), 
+    .reset(reset), 
+    .HIout(HIout), 
+    .LOout(LOout), 
+    .start(start), 
+    .busy(busy)
+    );
+
+

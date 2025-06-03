@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人空间</title>
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="layui-v2.7.6/layui-v2.7.6/layui/layui.js"></script>
+    <script src="Js/space.js"></script>
+    <link rel="stylesheet" type="text/css" href="layui-v2.7.6/layui-v2.7.6/layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="bulma/css/bulma-rtl.css">
+    <style>body{
+        font-family: "仓耳渔阳体 W04",serif;
+    }</style>
+</head>
+<body style="margin-left: 300px; margin-right: 300px" onload="initPage()">
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header has-background-success">
+        <div class="layui-logo layui-hide-xs layui-bg-green" style="font-size: x-large">个人空间</div>
+        <ul class="layui-nav layui-layout-left layui-row">
+        </ul>
+    </div>
+</div>
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 130px; margin-bottom: 50px">
+    <legend>个人信息</legend>
+</fieldset>
+<form class="layui-form" id="personal-info-form">
+    <div class="layui-form-item">
+        <label class="layui-form-label" style="width: 110px">用户名</label>
+        <div class="layui-input-inline">
+            <label>
+                <input type="text" name="name" autocomplete="off" class="layui-input">
+            </label>
+        </div>
+        <label class="layui-form-label" style="width: 110px">密码</label>
+        <div class="layui-input-inline">
+            <label>
+                <input type="text" name="pass" autocomplete="off" class="layui-input">
+            </label>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label" style="width: 110px">电话号码</label>
+        <div class="layui-input-inline">
+            <label>
+                <input type="text" name="phone" autocomplete="off" class="layui-input">
+            </label>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label" style="width: 110px">地理位置x</label>
+        <div class="layui-input-inline">
+            <label>
+                <input type="text" name="pos-x" autocomplete="off" class="layui-input">
+            </label>
+        </div>
+        <label class="layui-form-label" style="width: 110px">地理位置y</label>
+        <div class="layui-input-inline">
+            <label>
+                <input type="text" name="pos-y" autocomplete="off" class="layui-input">
+            </label>
+        </div>
+    </div>
+    <div id="diner-info">
+        <div class="layui-form-item">
+            <label class="layui-form-label" style="width: 110px">账户余额</label>
+            <div class="layui-input-inline">
+                <label>
+                    <input id="account" type="text" name="money" value="1000" autocomplete="off" class="layui-input" disabled>
+                </label>
+            </div>
+            <button class="layui-btn layui-btn-primary layui-border-green layui-btn-sm"
+                    type="button" data-method="window" data-type="auto" onclick="openWindow()">
+                <span style="font-size: small; font-family: '仓耳渔阳体 W04',serif" >充值</span>
+            </button>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label" style="width: 110px">是否VIP</label>
+            <div class="layui-input-inline">
+                <label>
+                    <input type="text" id="vip" name="vip" value="否" autocomplete="off" class="layui-input" disabled>
+                </label>
+            </div>
+            <button class="layui-btn layui-btn-primary layui-border-green layui-btn-sm" type="button" onclick="beVIP()">
+                <span style="font-size: small; font-family: '仓耳渔阳体 W04',serif" id="vip-btn">充值VIP</span>
+            </button>
+        </div>
+    </div>
+    <div id="restaurant-info">
+        <div class="layui-form-item">
+            <label class="layui-form-label" style="width: 110px">餐馆类别</label>
+            <div class="layui-input-inline">
+                <label>
+                    <select class="layui-select">
+                        <option value="0">火锅</option>
+                        <option value="1">中餐</option>
+                        <option value="2">早点</option>
+                        <option value="3">快餐</option>
+                    </select>
+                </label>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label" style="width: 110px">评分</label>
+            <div id="rate" style="position: relative; bottom: 7px"></div>
+        </div>
+    </div>
+    <div id="deliverer-info">
+        <div class="layui-form-item">
+            <label class="layui-form-label" style="width: 110px">工资</label>
+            <div class="layui-input-inline">
+                <label>
+                    <input type="text" id="salary" name="salary" value="3000" autocomplete="off" class="layui-input" disabled>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <button type="submit" class="layui-btn" onclick="save()">保存</button>
+        </div>
+    </div>
+</form>
+<div class="layui-upload">
+    <button type="button" class="layui-btn" id="upload-btn">上传图片</button>
+    <div class="layui-upload-list">
+        <img class="layui-upload-img" id="upload-img" alt="" src="">
+        <p id="upload-text"></p>
+    </div>
+    <div style="width: 95px;">
+        <div class="layui-progress layui-progress-big" lay-showpercent="yes" lay-filter="upload-progress">
+            <div class="layui-progress-bar" lay-percent=""></div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

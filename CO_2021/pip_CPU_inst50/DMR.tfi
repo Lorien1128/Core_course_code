@@ -1,0 +1,12 @@
+
+
+
+// Instantiate the module
+DMR instance_name (
+    .data(data), 
+    .addr(addr), 
+    .DMROp(DMROp), 
+    .dataout(dataout)
+    );
+
+

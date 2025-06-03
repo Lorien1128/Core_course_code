@@ -1,0 +1,2 @@
+vhdtdtfi -lang verilog -prj CPU -o D:/ISE/CPU/Control.tfi -lib work D:/ISE/CPU//Control.v -module Control -template D:/ISE/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+vhdtdtfi -lang verilog -prj CPU -o D:/ISE/CPU/Control.tfi -lib work D:/ISE/CPU//Control.v -module Control -template D:/ISE/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
