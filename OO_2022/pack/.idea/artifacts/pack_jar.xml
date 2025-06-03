@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="pack:jar">
+    <output-path>$PROJECT_DIR$/../task3</output-path>
+    <root id="archive" name="pack.jar">
+      <element id="module-output" name="pack" />
+    </root>
+  </artifact>
+</component>
